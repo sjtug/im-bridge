@@ -23,13 +23,13 @@ class Manager(object):
     def run(self):
         for p in self._ims:
             if not p.init_done:
-                logging.info("Init {}...", p.name)
+                logging.info("Init {}...".format(p.name))
                 p.init()
         while True:
             new_msg = self._queue.get()
             logging.info("New message acquired. Msg: {}".format(new_msg))
             for im in self._ims:
-                logging.debug("Sending message {} to {}", new_msg, im)
+                logging.debug("Sending message {} to {}".format(new_msg, im))
                 if new_msg.im != im:
                     im.send(new_msg) # Should not block here
             self._queue.task_done()
