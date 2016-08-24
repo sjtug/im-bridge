@@ -13,5 +13,5 @@ class PlatformBase(abc.ABC):
 
     @abc.abstractmethod
     def name(self):
-        """Im platform source name"""
+        """Im implatform source name"""
         pass
