@@ -10,7 +10,8 @@ setup(
     author_email='sjtug+subscribe@googlegroups.com',
     description='Bridge the gap between IM platforms',
     install_requires=[
-        "zenlog"
+        "zenlog",
+        "requests"
     ],
     packages=find_packages(),
     license="GPL3+",
