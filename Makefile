@@ -1,4 +1,7 @@
 dep:
-    pip install -r requirements.txt
+	pip3 install -r requirements.txt
 
-.PHONY: dep
+build:
+	python3 setup.py build
+
+.PHONY: dep build
