@@ -25,6 +25,9 @@ class WebhookListener(BaseHTTPRequestHandler):
 
 
 class WebhookPlatform(PlatformBase):
+    """
+    WebhookPlatform is a simple platform which listens from and sends to webhooks
+    """
     def default_input_mapper(self, s):
         return UserText(self, "", s)
 
@@ -32,6 +35,14 @@ class WebhookPlatform(PlatformBase):
         return msg.text
 
     def __init__(self, manager, input_port, output_url, input_mapper, output_mapper):
+        """
+        Initiate a WebhookPlatform object
+        :param manager: imbridge.manager.Manager instance
+        :param input_port: the port that WebhookPlatform listens on
+        :param output_url: the webhook URL which message is sent to
+        :param input_mapper: function(input_string) -> message
+        :param output_mapper: function(message) -> output_string
+        """
         super(WebhookPlatform, self).__init__()
         self._manager = manager
         self._input_port = input_port
