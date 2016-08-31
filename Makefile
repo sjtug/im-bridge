@@ -11,6 +11,6 @@ user-install:
 	python3 setup.py install --user
 
 test:
-	python3 -m unittest discover -p '*_test.py' -v
+	python3 -m unittest
 
 .PHONY: dep build install user-install test
