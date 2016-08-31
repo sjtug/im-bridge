@@ -3,6 +3,7 @@ import abc
 
 class MsgBase(abc.ABC):
     @property
+    @abc.abstractmethod
     def im(self):
         """Base abstract method of im getter """
         pass
@@ -14,11 +15,13 @@ class MsgBase(abc.ABC):
         pass
 
     @property
+    @abc.abstractmethod
     def text(self):
         """Base abstract method of text getter"""
         pass
 
     @property
+    @abc.abstractmethod
     def time(self):
         """Base abstract method of time getter"""
         pass
@@ -30,6 +33,7 @@ class MsgBase(abc.ABC):
         pass
 
     @property
+    @abc.abstractmethod
     def raw_text(self):
         """Base abstract method of rawText getter"""
         pass
